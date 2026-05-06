@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptit — AI-driven receptapp</title>
+    <meta
+      name="description"
+      content="Aptit är en AI-driven receptapp för iOS med veckoplanering, inköpslista och hushållsdelning."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site">
+        <a class="brand" href="./">Aptit<span class="dot">.</span></a>
+        <nav class="site">
+          <a href="support/">Support</a>
+          <a href="privacy/">Integritet</a>
+        </nav>
+      </header>
+
+      <h1>Aptit</h1>
+      <p class="lead">
+        AI-driven receptapp för iOS. Importera recept från en länk, ett foto
+        eller text — planera veckans middagar och få inköpslistan automatiskt.
+      </p>
+
+      <div class="card">
+        <h2>Funktioner</h2>
+        <ul>
+          <li>Importera recept från URL, bild eller text — Aptit tolkar och strukturerar automatiskt.</li>
+          <li>Veckoplanering med drag-and-drop och delad inköpslista.</li>
+          <li>Hushållsdelning — bjud in familjen via en kod.</li>
+          <li>Kylskåpsrensaren — få receptförslag baserat på vad du har hemma.</li>
+          <li>Receptböcker, favoriter och smart sökning.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Kom igång</h2>
+        <p>
+          Aptit finns i App Store. Behöver du hjälp eller har feedback? Hör av
+          dig på <a href="support/">supportsidan</a>.
+        </p>
+      </div>
+
+      <footer class="site">
+        <span>&copy; <span id="year"></span> Aptit</span>
+        <span>
+          <a href="privacy/">Integritetspolicy</a> ·
+          <a href="support/">Support</a>
+        </span>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

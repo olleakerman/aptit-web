@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support — Aptit</title>
+    <meta
+      name="description"
+      content="Hjälp och support för receptappen Aptit. Kontakt, vanliga frågor och hur du raderar ditt konto."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site">
+        <a class="brand" href="../">Aptit<span class="dot">.</span></a>
+        <nav class="site">
+          <a href="../support/">Support</a>
+          <a href="../privacy/">Integritet</a>
+        </nav>
+      </header>
+
+      <h1>Support</h1>
+      <p class="lead">
+        Behöver du hjälp, har hittat en bugg eller har önskemål om en funktion?
+        Vi svarar gärna.
+      </p>
+
+      <div class="card">
+        <h2>Kontakta oss</h2>
+        <p>
+          Mejla
+          <a href="mailto:helloaptit@gmail.com?subject=Aptit%20support">helloaptit@gmail.com</a>.
+          Skriv gärna vilken iPhone-modell och iOS-version du använder samt en
+          så detaljerad beskrivning som möjligt — då kan vi hjälpa dig
+          snabbare.
+        </p>
+        <p>Vi svarar normalt inom 1–2 arbetsdagar.</p>
+      </div>
+
+      <div class="card">
+        <h2>Vanliga frågor</h2>
+
+        <h3>Hur importerar jag ett recept?</h3>
+        <p>
+          Tryck på <strong>+</strong> i Recept-fliken och välj om du vill
+          importera från en länk, ett foto eller text. Aptit tolkar receptet
+          automatiskt — det tar några sekunder.
+        </p>
+
+        <h3>Receptimporten misslyckades. Vad gör jag?</h3>
+        <p>
+          Vissa sajter är svårare att tolka, särskilt sådana som kräver
+          inloggning eller laddar innehåll dynamiskt. Försök kopiera receptets
+          text och välj importera från text istället, eller fota receptet.
+        </p>
+
+        <h3>Hur bjuder jag in min familj till samma hushåll?</h3>
+        <p>
+          Gå till profilen via kugghjulet på hemskärmen och välj
+          <em>Hushåll</em>. Där hittar du en inbjudningskod som familjen kan
+          skriva in när de skapar konto eller via <em>Gå med i hushåll</em>.
+        </p>
+
+        <h3>Hur fungerar Premium?</h3>
+        <p>
+          Premium låser upp obegränsade AI-importer och Kylskåpsrensaren. Du
+          kan starta, pausa och säga upp prenumerationen när som helst i App
+          Store under <em>Inställningar → ditt namn → Prenumerationer</em>.
+        </p>
+
+        <h3>Hur raderar jag mitt konto?</h3>
+        <p>
+          Gå till profilen via kugghjulet på hemskärmen och välj
+          <em>Radera konto</em>. Alla dina personuppgifter och ditt innehåll
+          raderas inom 30 dagar. Du kan också mejla oss så hjälper vi dig.
+        </p>
+
+        <h3>Var lagras mina recept?</h3>
+        <p>
+          I Google Firebase i ett datacenter inom EU. Endast du och medlemmar
+          i ditt hushåll kan se ditt innehåll. Läs mer i
+          <a href="../privacy/">integritetspolicyn</a>.
+        </p>
+
+        <h3>Vilken iOS-version krävs?</h3>
+        <p>
+          Aptit kräver iOS 16 eller senare.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Önskemål och feedback</h2>
+        <p>
+          Aptit är under aktiv utveckling och vi älskar förslag. Saknar du en
+          funktion? Hör av dig — chansen är god att den hamnar på listan.
+        </p>
+      </div>
+
+      <footer class="site">
+        <span>&copy; <span id="year"></span> Aptit</span>
+        <span>
+          <a href="../privacy/">Integritetspolicy</a> ·
+          <a href="../support/">Support</a>
+        </span>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
