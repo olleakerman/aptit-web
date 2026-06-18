@@ -127,6 +127,10 @@ a:hover {
   margin-top: 16px;
 }
 
+.card h2:first-child {
+  margin-top: 0;
+}
+
 ul {
   padding-left: 22px;
 }
