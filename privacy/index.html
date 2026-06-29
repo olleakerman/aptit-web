@@ -6,7 +6,7 @@
     <title>Integritetspolicy — Aptit</title>
     <meta
       name="description"
-      content="Integritetspolicy för receptappen Aptit. Vilka data vi samlar in, varför, och dina rättigheter enligt GDPR."
+      content="Integritetspolicy för receptappen Aptit. Vilka data vi behandlar, varför, och dina rättigheter enligt GDPR."
     />
     <link rel="stylesheet" href="../style.css" />
   </head>
@@ -22,7 +22,7 @@
       </header>
 
       <h1>Integritetspolicy</h1>
-      <p class="updated">Senast uppdaterad: 6 maj 2026</p>
+      <p class="updated">Senast uppdaterad: 29 juni 2026</p>
 
       <p class="lead">
         Den här policyn beskriver vilka personuppgifter vi behandlar i appen
@@ -40,90 +40,65 @@
 
       <div class="card">
         <h2>Vilka uppgifter vi behandlar</h2>
-
-        <h3>Kontouppgifter</h3>
         <ul>
           <li>
-            E-postadress, namn och eventuell profilbild — när du skapar konto
-            via e-post eller Logga in med Apple.
+            <strong>E-postadress</strong> — för att skapa och identifiera ditt
+            konto och logga in. Vid Logga in med Apple kan du välja att dölja din
+            adress; vi får då en relay-adress och behandlar den som vilken
+            e-postadress som helst.
           </li>
-          <li>
-            Vid Logga in med Apple kan du välja att dölja din riktiga
-            e-postadress. Vi får då en relay-adress från Apple och behandlar
-            den som vilken e-postadress som helst.
-          </li>
-        </ul>
-
-        <h3>Innehåll du skapar i appen</h3>
-        <ul>
-          <li>Recept du importerar eller skapar (titel, ingredienser, steg, taggar, omslagsbild).</li>
-          <li>Veckoplanering, inköpslistor och receptböcker.</li>
-          <li>Hushåll du tillhör samt medlemmarnas display-namn.</li>
-          <li>Foton du laddar upp för receptimport eller som omslagsbild.</li>
-        </ul>
-
-        <h3>Köpinformation</h3>
-        <ul>
-          <li>
-            Premium-prenumerationer hanteras av Apple och RevenueCat. Vi tar
-            aldrig emot eller lagrar betalkortsuppgifter. Vi får endast ett
-            anonymt kund-ID från RevenueCat och status för din prenumeration.
-          </li>
-        </ul>
-
-        <h3>Tekniska uppgifter</h3>
-        <ul>
-          <li>
-            Anonyma fel- och kraschloggar via Firebase, om du har sådan
-            rapportering aktiverad i iOS-inställningarna.
-          </li>
-          <li>
-            Vi använder inte tredjepartsspårning, reklam-SDK:er eller
-            beteendeanalys.
-          </li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Varför vi behandlar uppgifterna</h2>
-        <ul>
-          <li><strong>Tillhandahålla tjänsten</strong> — synka recept, planering och hushåll mellan dina enheter.</li>
-          <li><strong>Receptimport</strong> — texten eller bilden du importerar skickas till Google Gemini för att tolkas till ett recept.</li>
-          <li><strong>Hushållsdelning</strong> — så att medlemmar i samma hushåll kan se delade recept och listor.</li>
-          <li><strong>Köp &amp; prenumerationer</strong> — verifiera premium-status.</li>
-          <li><strong>Säkerhet &amp; felsökning</strong> — upptäcka missbruk och åtgärda buggar.</li>
+          <li><strong>Visningsnamn och eventuell profilbild</strong> — visas för dig och övriga i ditt hushåll.</li>
+          <li><strong>Recept du skapar eller importerar</strong> (länkar, text, foton) — för att tolka, spara och visa dina recept.</li>
+          <li><strong>Veckoplaner, inköpslistor och receptböcker</strong> — för att planeringen och listan ska fungera och kunna delas i hushållet.</li>
+          <li><strong>Hushållsmedlemskap</strong> — för att dela recept, planer och listor mellan medlemmar.</li>
+          <li><strong>Prenumerationsstatus</strong> — för att ge åtkomst till Aptit Pro. Köpet hanteras av Apple; vi lagrar endast om du har en aktiv prenumeration.</li>
+          <li><strong>Enhets-token för aviseringar</strong> — för att skicka de push-notiser du valt att ta emot.</li>
+          <li><strong>Anonyma fel- och kraschloggar</strong> via Firebase, om du har sådan rapportering aktiverad i iOS-inställningarna.</li>
         </ul>
         <p>
-          Den rättsliga grunden är fullgörande av avtalet mellan dig och
-          Aptit (när du använder appen) samt vårt berättigade intresse av att
-          driva en säker och fungerande tjänst.
+          Vi samlar <strong>inte</strong> in din betalningsinformation — köp
+          sker via Apple och vi får aldrig se kort- eller kontouppgifter. Vi
+          använder inte tredjepartsspårning, reklam-SDK:er eller beteendeanalys.
         </p>
       </div>
 
       <div class="card">
-        <h2>Tredjepartstjänster</h2>
-        <p>För att leverera Aptit anlitar vi följande personuppgiftsbiträden:</p>
+        <h2>Recepttolkning och AI</h2>
+        <p>
+          När du importerar ett recept från en länk, text eller ett foto skickas
+          innehållet till Google (Gemini) för att tolkas och struktureras till
+          ett recept. Endast den text eller bild du själv skickar in delas — inga
+          konto- eller hushållsdata följer med. Innehållet behandlas för det
+          syftet och används inte för att träna externa modeller. Importera inte
+          innehåll du inte vill dela för bearbetning.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Tjänster vi anlitar (personuppgiftsbiträden)</h2>
         <ul>
           <li>
             <strong>Google Firebase</strong> (Authentication, Cloud Firestore,
-            Cloud Storage, Cloud Functions) — lagring av konto- och receptdata.
-            Data lagras inom EU (region <code>europe-west1</code>).
+            Cloud Storage, Cloud Functions) — konto och lagring av
+            recept/planer/listor samt drift. Data lagras inom EU (region
+            <code>europe-west1</code>).
           </li>
-          <li>
-            <strong>Google Gemini API</strong> — tolkning av recept som du
-            importerar. Endast den text eller bild du själv skickar in delas;
-            inga konto- eller hushållsdata följer med.
-          </li>
-          <li>
-            <strong>Apple</strong> — Logga in med Apple och App Store-köp.
-          </li>
-          <li>
-            <strong>RevenueCat</strong> — hantering av prenumerationsstatus.
-          </li>
+          <li><strong>Google Gemini</strong> — tolkar recept från länk, text och foto.</li>
+          <li><strong>Apple</strong> — Logga in med Apple och hantering av köp/prenumeration.</li>
+          <li><strong>RevenueCat</strong> — hanterar prenumerationsstatus för Aptit Pro.</li>
+          <li><strong>Expo Push</strong> — levererar push-notiser till din enhet.</li>
         </ul>
+        <p>Vi delar inte dina uppgifter med någon annan part och säljer dem aldrig.</p>
+      </div>
+
+      <div class="card">
+        <h2>Rättslig grund (GDPR)</h2>
         <p>
-          Vi delar inte dina uppgifter med någon annan part och säljer dem
-          aldrig.
+          Vi behandlar dina uppgifter för att kunna leverera appen du har begärt
+          (fullgörande av avtal, artikel 6.1 b), och i vissa fall utifrån ditt
+          samtycke — till exempel push-notiser, som du när som helst kan stänga
+          av i appen eller på din enhet. Vi har också ett berättigat intresse av
+          att driva en säker och fungerande tjänst.
         </p>
       </div>
 
@@ -135,10 +110,11 @@
           hushåll kan läsa dina recept, planeringar och listor.
         </p>
         <p>
-          Vi behåller dina uppgifter så länge ditt konto är aktivt. När du
-          raderar ditt konto raderas dina personuppgifter och innehåll inom 30
-          dagar, förutom där vi enligt lag måste behålla något (t.ex.
-          köphistorik via Apple).
+          Vi sparar dina uppgifter så länge du har ett konto. När du raderar ditt
+          konto tas dina personuppgifter, recept, planer och listor bort, liksom
+          hushåll där du var ensam medlem. Borttagning sker normalt direkt och
+          senast inom 30 dagar, förutom där vi enligt lag måste behålla något
+          (t.ex. köphistorik via Apple).
         </p>
       </div>
 
@@ -153,27 +129,29 @@
           <li>Lämna klagomål till Integritetsskyddsmyndigheten (IMY).</li>
         </ul>
         <p>
-          Mejla oss på
-          <a href="mailto:helloaptit@gmail.com">helloaptit@gmail.com</a>
-          så hjälper vi dig. Du kan också radera ditt konto direkt i appen.
+          Du kan radera hela ditt konto direkt i appen under
+          <em>Inställningar → Radera konto</em>. Vill du utöva någon annan
+          rättighet, mejla oss på
+          <a href="mailto:helloaptit@gmail.com">helloaptit@gmail.com</a> så
+          hjälper vi dig.
         </p>
       </div>
 
       <div class="card">
         <h2>Barns integritet</h2>
         <p>
-          Aptit riktar sig inte till barn under 13 år. Om du upptäcker att ett
-          barn har skapat ett konto utan vårdnadshavares samtycke, kontakta
-          oss så raderar vi kontot.
+          Aptit riktar sig inte till barn under 13 år och vi samlar inte
+          medvetet in uppgifter om barn under 13 år. Om du upptäcker att ett barn
+          har skapat ett konto utan vårdnadshavares samtycke, kontakta oss så
+          raderar vi kontot.
         </p>
       </div>
 
       <div class="card">
         <h2>Ändringar i policyn</h2>
         <p>
-          Vi kan komma att uppdatera den här policyn. Större ändringar
-          informerar vi om i appen. Datumet längst upp visar när policyn
-          senast uppdaterades.
+          Vi kan komma att uppdatera den här policyn. Vid väsentliga ändringar
+          uppdaterar vi datumet överst och informerar dig i appen när det behövs.
         </p>
       </div>
 
@@ -181,7 +159,7 @@
         <span>&copy; <span id="year"></span> Aptit</span>
         <span>
           <a href="../privacy/">Integritetspolicy</a> ·
-          <a href="../terms/">Villkor</a> ·
+          <a href="../terms/">Användarvillkor</a> ·
           <a href="../support/">Support</a>
         </span>
       </footer>
