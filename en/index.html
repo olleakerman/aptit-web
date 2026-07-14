@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptit — recipe app for iOS</title>
+    <meta
+      name="description"
+      content="Aptit is a recipe app for iOS with weekly meal planning, a shared shopping list and household sharing."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site">
+        <a class="brand" href="./">Aptit<span class="dot">.</span></a>
+        <nav class="site">
+          <a href="support/">Support</a>
+          <a href="privacy/">Privacy</a>
+          <a href="terms/">Terms</a>
+          <a href="../" lang="sv">Svenska</a>
+        </nav>
+      </header>
+
+      <h1>Aptit</h1>
+      <p class="lead">
+        The recipe app for iOS. Import recipes from a link, a photo or text,
+        plan the week's dinners and choose what lands on the shopping list.
+      </p>
+
+      <div class="card">
+        <h2>Features</h2>
+        <ul>
+          <li>Import recipes from a link, photo or text — Aptit reads and structures them for you.</li>
+          <li>Weekly planning and a shared shopping list — you choose what gets bought.</li>
+          <li>Household sharing — invite the family with a code.</li>
+          <li>Fridge cleaner — get recipe ideas from what you already have at home.</li>
+          <li>Recipe books, favorites and smart search.</li>
+          <li>Home-screen widgets — see today's and the week's meals without opening the app.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Get started</h2>
+        <p>
+          Aptit is on the App Store. Need help or have feedback? Reach us on
+          the <a href="support/">support page</a>.
+        </p>
+      </div>
+
+      <footer class="site">
+        <span>&copy; <span id="year"></span> Aptit</span>
+        <span>
+          <a href="privacy/">Privacy Policy</a> ·
+          <a href="terms/">Terms</a> ·
+          <a href="support/">Support</a>
+        </span>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support — Aptit</title>
+    <meta
+      name="description"
+      content="Help and support for the recipe app Aptit. Contact, FAQ and how to delete your account."
+    />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site">
+        <a class="brand" href="../">Aptit<span class="dot">.</span></a>
+        <nav class="site">
+          <a href="../support/">Support</a>
+          <a href="../privacy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../../support/" lang="sv">Svenska</a>
+        </nav>
+      </header>
+
+      <h1>Support</h1>
+      <p class="lead">
+        Need help, found a bug or have a feature request? We're glad to hear
+        from you.
+      </p>
+
+      <div class="card">
+        <h2>Contact us</h2>
+        <p>
+          Email
+          <a href="mailto:helloaptit@gmail.com?subject=Aptit%20support">helloaptit@gmail.com</a>.
+          Please include which iPhone model and iOS version you're using along
+          with as much detail as you can — that helps us help you faster.
+        </p>
+        <p>We normally reply within 1–2 business days.</p>
+      </div>
+
+      <div class="card">
+        <h2>FAQ</h2>
+
+        <h3>How do I import a recipe?</h3>
+        <p>
+          Tap <strong>+</strong> in the Recipes tab and choose whether to import
+          from a link, a photo or text. Aptit reads the recipe automatically — it
+          takes a few seconds.
+        </p>
+
+        <h3>The recipe import failed. What do I do?</h3>
+        <p>
+          Some sites are harder to read, especially ones that require a login or
+          load content dynamically. Try copying the recipe text and importing
+          from text instead, or take a photo of the recipe.
+        </p>
+
+        <h3>How do I invite my family to the same household?</h3>
+        <p>
+          Open your profile via the gear icon on the home screen and choose
+          <em>Household</em>. There you'll find an invite code your family can
+          enter when creating an account or via <em>Join household</em>.
+        </p>
+
+        <h3>How does Aptit Pro work?</h3>
+        <p>
+          Aptit Pro unlocks unlimited photo import, the Fridge cleaner and your
+          own recipe books — for everyone in the household on a single
+          subscription. You can start, pause and cancel the subscription anytime
+          in the App Store under <em>Settings → your name → Subscriptions</em>.
+          Full terms are in the <a href="../terms/">Terms of Use</a>.
+        </p>
+
+        <h3>How do I delete my account?</h3>
+        <p>
+          Open your profile via the gear icon on the home screen and choose
+          <em>Delete account</em>. All your personal data and content are deleted
+          within 30 days. You can also email us and we'll help you.
+        </p>
+
+        <h3>Where are my recipes stored?</h3>
+        <p>
+          In Google Firebase, in a data center within the EU. Only you and
+          members of your household can see your content. Read more in the
+          <a href="../privacy/">privacy policy</a>.
+        </p>
+
+        <h3>Which iOS version is required?</h3>
+        <p>
+          Aptit requires iOS 16 or later.
+        </p>
+
+        <h3>How do I add widgets to my home screen?</h3>
+        <p>
+          Press and hold the home screen until the apps jiggle, tap the plus in
+          the corner and search for Aptit. Choose <em>Today</em> or
+          <em>Week overview</em> and tap <em>Add Widget</em>.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Requests and feedback</h2>
+        <p>
+          Aptit is under active development and we love suggestions. Tap
+          <em>Feedback</em> under <em>Settings → Help &amp; about</em>, or email
+          us — there's a good chance it'll make the list.
+        </p>
+      </div>
+
+      <footer class="site">
+        <span>&copy; <span id="year"></span> Aptit</span>
+        <span>
+          <a href="../privacy/">Privacy Policy</a> ·
+          <a href="../terms/">Terms</a> ·
+          <a href="../support/">Support</a>
+        </span>
+      </footer>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
