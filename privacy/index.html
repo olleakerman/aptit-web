@@ -23,7 +23,7 @@
       </header>
 
       <h1>Integritetspolicy</h1>
-      <p class="updated">Senast uppdaterad: 10 juli 2026</p>
+      <p class="updated">Senast uppdaterad: 1 oktober 2026</p>
 
       <p class="lead">
         Den här policyn beskriver vilka personuppgifter vi behandlar i appen
@@ -46,16 +46,18 @@
             <strong>E-postadress</strong> — för att skapa och identifiera ditt
             konto och logga in. Vid Logga in med Apple kan du välja att dölja din
             adress; vi får då en relay-adress och behandlar den som vilken
-            e-postadress som helst.
+            e-postadress som helst. Adressen finns bara i inloggningstjänsten och
+            visas inte för andra i ditt hushåll.
           </li>
           <li><strong>Visningsnamn och eventuell profilbild</strong> — visas för dig och övriga i ditt hushåll.</li>
           <li><strong>Recept du skapar eller importerar</strong> (länkar, text, foton) — för att tolka, spara och visa dina recept.</li>
           <li><strong>Veckoplaner, inköpslistor och receptböcker</strong> — för att planeringen och listan ska fungera och kunna delas i hushållet.</li>
           <li><strong>Hushållsmedlemskap</strong> — för att dela recept, planer och listor mellan medlemmar.</li>
-          <li><strong>Prenumerationsstatus</strong> — för att ge åtkomst till Aptit Pro. Köpet hanteras av Apple; vi lagrar endast om du har en aktiv prenumeration.</li>
+          <li><strong>Prenumerationsstatus</strong> — för att ge åtkomst till Aptit Pro. Köpet hanteras av Apple; vi lagrar bara om du har en aktiv prenumeration och när den löper ut. RevenueCat meddelar oss när statusen ändras.</li>
           <li><strong>Enhets-token för aviseringar</strong> — för att skicka de push-notiser du valt att ta emot.</li>
-          <li><strong>Anonyma fel- och kraschloggar</strong> via Firebase, om du har sådan rapportering aktiverad i iOS-inställningarna.</li>
-          <li><strong>Feedback du skickar via Tyck till</strong> — ditt meddelande samt teknisk information (appversion, enhetsmodell och operativsystem) så att vi kan förstå och svara på det du skriver.</li>
+          <li><strong>Feedback du skickar via Tyck till</strong> — ditt meddelande, din e-postadress och teknisk information (appversion, enhetsmodell och operativsystem) så att vi kan förstå och svara på det du skriver.</li>
+          <li><strong>Kylskåpsrensaren</strong> — det du skriver, dina val (till exempel kost och tid) och titlarna på förslagen sparas kopplat till ditt konto, så att vi kan förbättra förslagen. Kastar du ett förslag sparas även dess titel och din eventuella kommentar.</li>
+          <li><strong>Användningsräknare</strong> — hur många importer och receptförslag du gjort per dygn, för att skydda tjänsten mot missbruk. Räknaren raderas efter ungefär en vecka.</li>
         </ul>
         <p>
           Vi samlar <strong>inte</strong> in din betalningsinformation — köp
@@ -67,12 +69,17 @@
       <div class="card">
         <h2>Recepttolkning och AI</h2>
         <p>
-          När du importerar ett recept från en länk, text eller ett foto skickas
-          innehållet till Google (Gemini) för att tolkas och struktureras till
-          ett recept. Endast den text eller bild du själv skickar in delas — inga
-          konto- eller hushållsdata följer med. Innehållet behandlas för det
-          syftet och används inte för att träna externa modeller. Importera inte
-          innehåll du inte vill dela för bearbetning.
+          När du importerar ett recept från en länk hämtar vi sidan och läser
+          receptet. Saknar sidan strukturerad receptdata skickas länken till
+          Jina AI, som hämtar sidan åt oss och returnerar dess text. Receptets
+          text — från länken, text du klistrar in eller ett foto du tar — skickas
+          sedan till Google (Gemini) för att tolkas, struktureras och vid behov
+          skrivas om till ditt språk och dina mått. Det du skriver i
+          kylskåpsrensaren skickas också till Gemini för att ta fram förslag.
+          Bara receptinnehållet delas — inga konto- eller hushållsdata följer med.
+          Innehållet behandlas för det syftet och används inte för att träna
+          externa modeller. Importera inte innehåll du inte vill dela för
+          bearbetning.
         </p>
       </div>
 
@@ -85,7 +92,8 @@
             recept/planer/listor samt drift. Data lagras inom EU (region
             <code>europe-west1</code>).
           </li>
-          <li><strong>Google Gemini</strong> — tolkar recept från länk, text och foto.</li>
+          <li><strong>Google Gemini</strong> — tolkar och översätter recept från länk, text och foto, och tar fram förslag i kylskåpsrensaren.</li>
+          <li><strong>Jina AI</strong> — hämtar texten från receptsidor som saknar strukturerad receptdata. Får bara länken.</li>
           <li><strong>Apple</strong> — Logga in med Apple och hantering av köp/prenumeration.</li>
           <li><strong>RevenueCat</strong> — hanterar prenumerationsstatus för Aptit Pro.</li>
           <li><strong>Expo Push</strong> — levererar push-notiser till din enhet.</li>
@@ -113,10 +121,13 @@
         </p>
         <p>
           Vi sparar dina uppgifter så länge du har ett konto. När du raderar ditt
-          konto tas dina personuppgifter, recept, planer och listor bort, liksom
-          hushåll där du var ensam medlem. Borttagning sker normalt direkt och
-          senast inom 30 dagar, förutom där vi enligt lag måste behålla något
-          (t.ex. köphistorik via Apple).
+          konto tas dina personuppgifter, recept, planer, listor, bilder, feedback
+          och kylskåpsdata bort, och har du loggat in med Apple återkallar vi
+          appens åtkomst hos Apple. Äger du ett hushåll där andra är med behöver
+          du först ta bort dem, så att deras delade recept och planering inte
+          raderas. Borttagning sker normalt direkt och senast inom 30 dagar,
+          förutom där vi enligt lag måste behålla något (t.ex. köphistorik via
+          Apple).
         </p>
       </div>
 

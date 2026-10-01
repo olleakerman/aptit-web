@@ -23,7 +23,7 @@
       </header>
 
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: July 10, 2026</p>
+      <p class="updated">Last updated: October 1, 2026</p>
 
       <p class="lead">
         This policy describes the personal data we process in the Aptit app, why
@@ -46,16 +46,18 @@
             <strong>Email address</strong> — to create and identify your account
             and sign you in. With Sign in with Apple you can choose to hide your
             address; we then receive a relay address and treat it like any other
-            email address.
+            email address. The address is only kept by the sign-in service and is
+            not shown to others in your household.
           </li>
           <li><strong>Display name and optional profile picture</strong> — shown to you and to others in your household.</li>
           <li><strong>Recipes you create or import</strong> (links, text, photos) — to read, save and display your recipes.</li>
           <li><strong>Meal plans, shopping lists and recipe books</strong> — so planning and the list work and can be shared within the household.</li>
           <li><strong>Household membership</strong> — to share recipes, plans and lists between members.</li>
-          <li><strong>Subscription status</strong> — to grant access to Aptit Pro. The purchase is handled by Apple; we only store whether you have an active subscription.</li>
+          <li><strong>Subscription status</strong> — to grant access to Aptit Pro. The purchase is handled by Apple; we only store whether you have an active subscription and when it expires. RevenueCat notifies us when the status changes.</li>
           <li><strong>Device token for notifications</strong> — to send the push notifications you've chosen to receive.</li>
-          <li><strong>Anonymous error and crash logs</strong> via Firebase, if you have such reporting enabled in your iOS settings.</li>
-          <li><strong>Feedback you send via "Feedback"</strong> — your message plus technical information (app version, device model and operating system) so we can understand and respond.</li>
+          <li><strong>Feedback you send via "Feedback"</strong> — your message, your email address and technical information (app version, device model and operating system) so we can understand and respond.</li>
+          <li><strong>Fridge Cleaner</strong> — what you type, your choices (for example diet and time) and the titles of the suggestions are saved with your account so we can improve the suggestions. If you discard a suggestion, its title and any comment you add are saved too.</li>
+          <li><strong>Usage counter</strong> — how many imports and recipe suggestions you've made per day, to protect the service from abuse. The counter is deleted after about a week.</li>
         </ul>
         <p>
           We do <strong>not</strong> collect your payment information — purchases
@@ -67,12 +69,16 @@
       <div class="card">
         <h2>Recipe parsing and AI</h2>
         <p>
-          When you import a recipe from a link, text or a photo, the content is
-          sent to Google (Gemini) to be read and structured into a recipe. Only
-          the text or image you submit yourself is shared — no account or
-          household data is included. The content is processed for that purpose
-          and is not used to train external models. Don't import content you
-          don't want to share for processing.
+          When you import a recipe from a link, we fetch the page and read the
+          recipe. If the page has no structured recipe data, the link is sent to
+          Jina AI, which fetches the page for us and returns its text. The recipe
+          text — from the link, text you paste or a photo you take — is then sent
+          to Google (Gemini) to be read, structured and, if needed, rewritten in
+          your language and units. What you type in the Fridge Cleaner is also
+          sent to Gemini to come up with suggestions. Only the recipe content is
+          shared — no account or household data is included. The content is
+          processed for that purpose and is not used to train external models.
+          Don't import content you don't want to share for processing.
         </p>
       </div>
 
@@ -85,7 +91,8 @@
             recipes/plans/lists plus operations. Data is stored within the EU
             (region <code>europe-west1</code>).
           </li>
-          <li><strong>Google Gemini</strong> — reads recipes from links, text and photos.</li>
+          <li><strong>Google Gemini</strong> — reads and translates recipes from links, text and photos, and comes up with Fridge Cleaner suggestions.</li>
+          <li><strong>Jina AI</strong> — fetches the text of recipe pages that have no structured recipe data. Only receives the link.</li>
           <li><strong>Apple</strong> — Sign in with Apple and handling of purchases/subscriptions.</li>
           <li><strong>RevenueCat</strong> — manages subscription status for Aptit Pro.</li>
           <li><strong>Expo Push</strong> — delivers push notifications to your device.</li>
@@ -115,11 +122,13 @@
         </p>
         <p>
           We keep your data for as long as you have an account. When you delete
-          your account, your personal data, recipes, plans and lists are removed,
-          as are households where you were the only member. Deletion normally
-          happens immediately and within 30 days at the latest, except where we
-          are required by law to retain something (e.g. purchase history via
-          Apple).
+          your account, your personal data, recipes, plans, lists, images,
+          feedback and Fridge Cleaner data are removed, and if you signed in with
+          Apple we revoke the app's access with Apple. If you own a household
+          that others are in, you first need to remove them so their shared
+          recipes and plans aren't deleted. Deletion normally happens immediately
+          and within 30 days at the latest, except where we are required by law
+          to retain something (e.g. purchase history via Apple).
         </p>
       </div>
 
