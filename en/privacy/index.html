@@ -23,7 +23,7 @@
       </header>
 
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: October 1, 2026</p>
+      <p class="updated">Last updated: October 5, 2026</p>
 
       <p class="lead">
         This policy describes the personal data we process in the Aptit app, why
@@ -58,11 +58,14 @@
           <li><strong>Feedback you send via "Feedback"</strong> — your message, your email address and technical information (app version, device model and operating system) so we can understand and respond.</li>
           <li><strong>Fridge Rescue</strong> — what you type, your choices (for example diet and time) and the titles of the suggestions are saved with your account so we can improve the suggestions. If you discard a suggestion, its title and any comment you add are saved too.</li>
           <li><strong>Usage counter</strong> — how many imports and recipe suggestions you've made per day, to protect the service from abuse. The counter is deleted after about a week.</li>
+          <li><strong>Crash reports</strong> — when the app crashes or hits an error, a technical report is sent: where in the code it happened, app version, device model and operating system. The report isn't linked to your account and contains no recipes or email address.</li>
+          <li><strong>Event log</strong> — a few events are saved with your account: when it was created, your first import, your first planned meal, when the paywall is shown, and purchases. We use them to see whether Aptit makes it easy to get started. The log is deleted after 13 months.</li>
         </ul>
         <p>
           We do <strong>not</strong> collect your payment information — purchases
-          happen through Apple and we never see card or account details. We do
-          not use third-party tracking, advertising SDKs or behavioral analytics.
+          happen through Apple and we never see card or account details. We
+          don't use third-party tracking or advertising SDKs, and we don't follow how
+          you use the app beyond the event log above.
         </p>
       </div>
 
@@ -87,15 +90,16 @@
         <ul>
           <li>
             <strong>Google Firebase</strong> (Authentication, Cloud Firestore,
-            Cloud Storage, Cloud Functions) — accounts and storage of
-            recipes/plans/lists plus operations. Data is stored within the EU
+            Cloud Storage, Cloud Functions, App Check) — accounts and storage of
+            recipes/plans/lists plus operations and protection against abuse. Data is stored within the EU
             (region <code>europe-west1</code>).
           </li>
           <li><strong>Google Gemini</strong> — reads and translates recipes from links, text and photos, and comes up with Fridge Rescue suggestions.</li>
           <li><strong>Jina AI</strong> — fetches the text of recipe pages that have no structured recipe data. Only receives the link.</li>
-          <li><strong>Apple</strong> — Sign in with Apple and handling of purchases/subscriptions.</li>
+          <li><strong>Apple</strong> — Sign in with Apple, handling of purchases/subscriptions, and App Attest, which confirms that requests come from the genuine Aptit app. The confirmation contains nothing about you or what you've added.</li>
           <li><strong>RevenueCat</strong> — manages subscription status for Aptit Pro.</li>
           <li><strong>Expo Push</strong> — delivers push notifications to your device.</li>
+          <li><strong>Sentry</strong> — receives crash reports. Data is stored in the EU (Frankfurt).</li>
         </ul>
         <p>We do not share your data with any other party and never sell it.</p>
       </div>
@@ -123,7 +127,7 @@
         <p>
           We keep your data for as long as you have an account. When you delete
           your account, your personal data, recipes, plans, lists, images,
-          feedback and Fridge Rescue data are removed, and if you signed in with
+          feedback, Fridge Rescue data and event log are removed, and if you signed in with
           Apple we revoke the app's access with Apple. If you own a household
           that others are in, you first need to remove them so their shared
           recipes and plans aren't deleted. Deletion normally happens immediately

@@ -23,7 +23,7 @@
       </header>
 
       <h1>Integritetspolicy</h1>
-      <p class="updated">Senast uppdaterad: 1 oktober 2026</p>
+      <p class="updated">Senast uppdaterad: 5 oktober 2026</p>
 
       <p class="lead">
         Den här policyn beskriver vilka personuppgifter vi behandlar i appen
@@ -58,11 +58,14 @@
           <li><strong>Feedback du skickar via Tyck till</strong> — ditt meddelande, din e-postadress och teknisk information (appversion, enhetsmodell och operativsystem) så att vi kan förstå och svara på det du skriver.</li>
           <li><strong>Kylskåpsrensaren</strong> — det du skriver, dina val (till exempel kost och tid) och titlarna på förslagen sparas kopplat till ditt konto, så att vi kan förbättra förslagen. Kastar du ett förslag sparas även dess titel och din eventuella kommentar.</li>
           <li><strong>Användningsräknare</strong> — hur många importer och receptförslag du gjort per dygn, för att skydda tjänsten mot missbruk. Räknaren raderas efter ungefär en vecka.</li>
+          <li><strong>Kraschrapporter</strong> — när appen kraschar eller ett fel uppstår skickas en teknisk rapport: var i koden felet uppstod, appversion, enhetsmodell och operativsystem. Rapporten är inte kopplad till ditt konto och innehåller inga recept och ingen e-postadress.</li>
+          <li><strong>Händelselogg</strong> — några få händelser sparas kopplade till ditt konto: att kontot skapades, din första import, din första planerade måltid, när betalväggen visas och köp. Vi använder dem för att se om Aptit gör det lätt att komma igång. Loggen raderas efter 13 månader.</li>
         </ul>
         <p>
           Vi samlar <strong>inte</strong> in din betalningsinformation — köp
           sker via Apple och vi får aldrig se kort- eller kontouppgifter. Vi
-          använder inte tredjepartsspårning, reklam-SDK:er eller beteendeanalys.
+          använder inte tredjepartsspårning eller reklam-SDK:er, och vi följer inte hur
+          du använder appen utöver händelseloggen ovan.
         </p>
       </div>
 
@@ -88,15 +91,16 @@
         <ul>
           <li>
             <strong>Google Firebase</strong> (Authentication, Cloud Firestore,
-            Cloud Storage, Cloud Functions) — konto och lagring av
-            recept/planer/listor samt drift. Data lagras inom EU (region
+            Cloud Storage, Cloud Functions, App Check) — konto och lagring av
+            recept/planer/listor samt drift och skydd mot missbruk. Data lagras inom EU (region
             <code>europe-west1</code>).
           </li>
           <li><strong>Google Gemini</strong> — tolkar och översätter recept från länk, text och foto, och tar fram förslag i kylskåpsrensaren.</li>
           <li><strong>Jina AI</strong> — hämtar texten från receptsidor som saknar strukturerad receptdata. Får bara länken.</li>
-          <li><strong>Apple</strong> — Logga in med Apple och hantering av köp/prenumeration.</li>
+          <li><strong>Apple</strong> — Logga in med Apple, hantering av köp/prenumeration och App Attest, som intygar att anropen kommer från den äkta Aptit-appen. Intyget innehåller inget om dig eller det du lagt in.</li>
           <li><strong>RevenueCat</strong> — hanterar prenumerationsstatus för Aptit Pro.</li>
           <li><strong>Expo Push</strong> — levererar push-notiser till din enhet.</li>
+          <li><strong>Sentry</strong> — tar emot kraschrapporter. Data lagras inom EU (Frankfurt).</li>
         </ul>
         <p>Vi delar inte dina uppgifter med någon annan part och säljer dem aldrig.</p>
       </div>
@@ -121,8 +125,8 @@
         </p>
         <p>
           Vi sparar dina uppgifter så länge du har ett konto. När du raderar ditt
-          konto tas dina personuppgifter, recept, planer, listor, bilder, feedback
-          och kylskåpsdata bort, och har du loggat in med Apple återkallar vi
+          konto tas dina personuppgifter, recept, planer, listor, bilder, feedback,
+          kylskåpsdata och händelselogg bort, och har du loggat in med Apple återkallar vi
           appens åtkomst hos Apple. Äger du ett hushåll där andra är med behöver
           du först ta bort dem, så att deras delade recept och planering inte
           raderas. Borttagning sker normalt direkt och senast inom 30 dagar,
