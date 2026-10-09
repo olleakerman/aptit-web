@@ -23,7 +23,7 @@
       </header>
 
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: October 5, 2026</p>
+      <p class="updated">Last updated: October 9, 2026</p>
 
       <p class="lead">
         This policy describes the personal data we process in the Aptit app, why
@@ -91,10 +91,12 @@
           <li>
             <strong>Google Firebase</strong> (Authentication, Cloud Firestore,
             Cloud Storage, Cloud Functions, App Check) — accounts and storage of
-            recipes/plans/lists plus operations and protection against abuse. Data is stored within the EU
-            (region <code>europe-west1</code>).
+            recipes/plans/lists plus operations and protection against abuse. Recipes, plans, lists and
+            images are stored within the EU (region <code>europe-west1</code>). Sign-in (Authentication)
+            runs only in Google's data centers in the US.
           </li>
-          <li><strong>Google Gemini</strong> — reads and translates recipes from links, text and photos, and comes up with Fridge Rescue suggestions.</li>
+          <li><strong>Google Gemini</strong> — reads and translates recipes from links, text and photos, and comes up with Fridge Rescue suggestions. Content may be processed temporarily in Google's data centers outside the EU.</li>
+          <li><strong>Google's icon service</strong> — fetches the small icon for a recipe's source when you open a recipe with a link. Google then receives the source site's address (for example, allrecipes.com) and your IP address.</li>
           <li><strong>Jina AI</strong> — fetches the text of recipe pages that have no structured recipe data. Only receives the link.</li>
           <li><strong>Apple</strong> — Sign in with Apple, handling of purchases/subscriptions, and App Attest, which confirms that requests come from the genuine Aptit app. The confirmation contains nothing about you or what you've added.</li>
           <li><strong>RevenueCat</strong> — manages subscription status for Aptit Pro.</li>
@@ -102,6 +104,29 @@
           <li><strong>Sentry</strong> — receives crash reports. Data is stored in the EU (Frankfurt).</li>
         </ul>
         <p>We do not share your data with any other party and never sell it.</p>
+      </div>
+
+      <div class="card">
+        <h2>Where your data is processed</h2>
+        <p>
+          Aptit is run from Sweden, so the GDPR (the EU's data protection law)
+          applies to your data wherever you live. Recipes, plans, lists and
+          images are stored within the EU. Some of our services process, or may
+          process, data in the US:
+        </p>
+        <ul>
+          <li><strong>Google</strong> (sign-in, Gemini and the icon service) — your email address, the recipe content you add, and the source site's address.</li>
+          <li><strong>RevenueCat</strong> — your account ID and subscription status.</li>
+          <li><strong>Expo Push</strong> — your device token and the text of your notifications.</li>
+          <li><strong>Jina AI</strong> (part of Elastic) — the link to the recipe page.</li>
+        </ul>
+        <p>
+          Google, Expo and Elastic participate in the EU-U.S. Data Privacy
+          Framework, which the European Commission has found to provide adequate
+          protection. For RevenueCat, the European Commission's Standard
+          Contractual Clauses apply. Email us if you'd like to know more about
+          these safeguards.
+        </p>
       </div>
 
       <div class="card">
@@ -120,7 +145,7 @@
       <div class="card">
         <h2>Storage and security</h2>
         <p>
-          Your data is stored in Google's data centers within the EU. Access is
+          Your recipes, plans, lists and images are stored in Google's data centers within the EU. Access is
           protected by Firebase Security Rules — only you and members of your own
           household can read your recipes, plans and lists.
         </p>
@@ -128,9 +153,9 @@
           We keep your data for as long as you have an account. When you delete
           your account, your personal data, recipes, plans, lists, images,
           feedback, Fridge Rescue data and event log are removed, and if you signed in with
-          Apple we revoke the app's access with Apple. If you own a household
-          that others are in, you first need to remove them so their shared
-          recipes and plans aren't deleted. Deletion normally happens immediately
+          Apple we revoke the app's access with Apple. If others are in your household, you
+          leave it and the person who's been there longest takes over. Their
+          recipes and your shared plans stay. Deletion normally happens immediately
           and within 30 days at the latest, except where we are required by law
           to retain something (e.g. purchase history via Apple).
         </p>

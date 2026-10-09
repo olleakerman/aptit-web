@@ -23,7 +23,7 @@
       </header>
 
       <h1>Integritetspolicy</h1>
-      <p class="updated">Senast uppdaterad: 5 oktober 2026</p>
+      <p class="updated">Senast uppdaterad: 9 oktober 2026</p>
 
       <p class="lead">
         Den här policyn beskriver vilka personuppgifter vi behandlar i appen
@@ -92,10 +92,12 @@
           <li>
             <strong>Google Firebase</strong> (Authentication, Cloud Firestore,
             Cloud Storage, Cloud Functions, App Check) — konto och lagring av
-            recept/planer/listor samt drift och skydd mot missbruk. Data lagras inom EU (region
-            <code>europe-west1</code>).
+            recept/planer/listor samt drift och skydd mot missbruk. Recept, planer, listor och bilder
+            lagras inom EU (region <code>europe-west1</code>). Inloggningen (Authentication) körs bara
+            i Googles datacenter i USA.
           </li>
-          <li><strong>Google Gemini</strong> — tolkar och översätter recept från länk, text och foto, och tar fram förslag i kylskåpsrensaren.</li>
+          <li><strong>Google Gemini</strong> — tolkar och översätter recept från länk, text och foto, och tar fram förslag i kylskåpsrensaren. Innehållet kan behandlas tillfälligt i Googles datacenter utanför EU.</li>
+          <li><strong>Googles ikontjänst</strong> — hämtar den lilla ikonen för receptets källa när du öppnar ett recept med länk. Google får då källsajtens adress (till exempel ica.se) och din IP-adress.</li>
           <li><strong>Jina AI</strong> — hämtar texten från receptsidor som saknar strukturerad receptdata. Får bara länken.</li>
           <li><strong>Apple</strong> — Logga in med Apple, hantering av köp/prenumeration och App Attest, som intygar att anropen kommer från den äkta Aptit-appen. Intyget innehåller inget om dig eller det du lagt in.</li>
           <li><strong>RevenueCat</strong> — hanterar prenumerationsstatus för Aptit Pro.</li>
@@ -103,6 +105,27 @@
           <li><strong>Sentry</strong> — tar emot kraschrapporter. Data lagras inom EU (Frankfurt).</li>
         </ul>
         <p>Vi delar inte dina uppgifter med någon annan part och säljer dem aldrig.</p>
+      </div>
+
+      <div class="card">
+        <h2>Var dina uppgifter behandlas</h2>
+        <p>
+          Aptit drivs från Sverige, så GDPR gäller för dina uppgifter oavsett
+          var du bor. Recept, planer, listor och bilder lagras inom EU. Några av
+          tjänsterna behandlar, eller kan behandla, uppgifter i USA:
+        </p>
+        <ul>
+          <li><strong>Google</strong> (inloggningen, Gemini och ikontjänsten) — din e-postadress, receptinnehållet du lägger till och källsajtens adress.</li>
+          <li><strong>RevenueCat</strong> — ditt konto-id och din prenumerationsstatus.</li>
+          <li><strong>Expo Push</strong> — din enhets-token och notisernas text.</li>
+          <li><strong>Jina AI</strong> (en del av Elastic) — länken till receptsidan.</li>
+        </ul>
+        <p>
+          Google, Expo och Elastic är anslutna till EU–US Data Privacy Framework,
+          som EU-kommissionen har bedömt ger ett adekvat skydd. Med RevenueCat
+          gäller EU-kommissionens standardavtalsklausuler. Mejla oss om du vill
+          veta mer om skyddsåtgärderna.
+        </p>
       </div>
 
       <div class="card">
@@ -119,7 +142,7 @@
       <div class="card">
         <h2>Lagring och säkerhet</h2>
         <p>
-          Dina uppgifter lagras i Googles datacenter inom EU. Tillgång skyddas
+          Dina recept, planer, listor och bilder lagras i Googles datacenter inom EU. Tillgång skyddas
           via Firebase Security Rules — endast du och medlemmar i ditt eget
           hushåll kan läsa dina recept, planeringar och listor.
         </p>
@@ -127,9 +150,9 @@
           Vi sparar dina uppgifter så länge du har ett konto. När du raderar ditt
           konto tas dina personuppgifter, recept, planer, listor, bilder, feedback,
           kylskåpsdata och händelselogg bort, och har du loggat in med Apple återkallar vi
-          appens åtkomst hos Apple. Äger du ett hushåll där andra är med behöver
-          du först ta bort dem, så att deras delade recept och planering inte
-          raderas. Borttagning sker normalt direkt och senast inom 30 dagar,
+          appens åtkomst hos Apple. Är ni flera i hushållet lämnar du
+          det, och den som varit med längst tar över. De andras recept och er
+          gemensamma planering finns kvar. Borttagning sker normalt direkt och senast inom 30 dagar,
           förutom där vi enligt lag måste behålla något (t.ex. köphistorik via
           Apple).
         </p>
