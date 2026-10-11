@@ -3,7 +3,7 @@
   --bg-end: #E8E0D6;
   --text: #1A1A1A;
   --muted: rgba(0, 0, 0, 0.6);
-  --primary: #FF6B35;
+  --primary: #B0461C; /* paprika för text, klarar 4,5:1 (JURIDIK-SAKERHET A1) */
   --card: rgba(255, 255, 255, 0.72);
   --border: rgba(0, 0, 0, 0.08);
   --max: 720px;
@@ -53,8 +53,20 @@ header.site {
   text-decoration: none;
 }
 
-.brand .dot {
-  color: var(--primary);
+.brand .logo {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+a.store {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #C8410F; /* paprika för ytor med vit text, 4,98:1 */
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 nav.site a {
